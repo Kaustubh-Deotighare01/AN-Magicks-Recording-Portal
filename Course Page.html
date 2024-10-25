@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007bff; /* Blue header */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%; /* Full width header */
+            position: fixed; /* Keep the header fixed at the top */
+            top: 0; /* Align at the top */
+            left: 0; /* Align at the left */
+            z-index: 1000; /* Ensure the header is above other content */
+        }
+
+        .container {
+            display: flex; /* Arrange sections in a column */
+            flex-direction: column; /* Column layout for mobile */
+            align-items: center; /* Center items */
+            padding: 80px 20px 20px; /* Add top padding for header space */
+            width: 100%; /* Full width */
+            max-width: 800px; /* Limit max width */
+            margin: 0 auto; /* Center the container */
+        }
+
+        .course-section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%; /* Full width */
+            margin-bottom: 20px; /* Space between sections */
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .course-list {
+            margin: 10px 0;
+            width: 100%; /* Ensure full width */
+        }
+
+        .course-item {
+            margin-bottom: 15px;
+            display: flex; /* Align items in a row */
+            flex-direction: column; /* Stack items vertically on small screens */
+            justify-content: center; /* Center vertically */
+            align-items: center; /* Center items */
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            width: 100%; /* Full width for course items */
+        }
+
+        .course-item a {
+            padding: 10px 20px; /* Adjust padding */
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            flex: 1; /* Allow link to take available space */
+            text-align: center;
+            transition: background-color 0.3s;
+            margin-bottom: 10px; /* Space between course link and button */
+            width: 100%; /* Full width for link */
+        }
+
+        .course-item a:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        .download-button {
+            padding: 10px;
+            background-color: #28a745; /* Green button */
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            text-align: center;
+            transition: background-color 0.3s;
+            width: 100%; /* Full width for download buttons */
+        }
+
+        .download-button:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+
+        /* Media queries for responsiveness */
+        @media (min-width: 600px) {
+            .course-item {
+                flex-direction: row; /* Row layout for larger screens */
+                justify-content: space-between; /* Space between course link and button */
+                align-items: center; /* Center vertically */
+            }
+
+            .course-item a {
+                margin-right: 10px; /* Space between link and button */
+                flex: 1; /* Allow link to take available space */
+            }
+
+            .course-item a:last-child {
+                margin-right: 0; /* Remove margin from the last item */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>View Courses</h1>
+    </header>
+    <div class="container">
+        <div class="course-section">
+            <h2>Courses</h2>
+            <div class="course-list">
+                <div class="course-item">
+                    <a href="C:\Users\Lenovo\Downloads\AN 2 Wbsitee-20241025T152914Z-001\AN 2 Wbsitee_\Day1.html" target="_blank">Rudraksha Course Day: 1</a>
+                    <a href="https://example.com/download/course1.pdf" class="download-button" target="_blank">Download Day 1 Notes</a> <!-- Replace with actual download link -->
+                </div>
+                <div class="course-item">
+                    <a href="C:\Users\Lenovo\Downloads\AN 2 Wbsitee-20241025T152914Z-001\AN 2 Wbsitee_\Day2.html" target="_blank">Rudraksha Course Day: 2</a>
+                    <a href="https://example.com/download/course2.pdf" class="download-button" target="_blank">Download Day 2 Notes</a> <!-- Replace with actual download link -->
+                </div>
+                <div class="course-item">
+                    <a href="C:\Users\Lenovo\Downloads\AN 2 Wbsitee-20241025T152914Z-001\AN 2 Wbsitee_\Day3.html" target="_blank">Rudraksha Course Day: 3</a>
+                    <a href="https://example.com/download/course3.pdf" class="download-button" target="_blank">Download Day 3 Notes</a> <!-- Replace with actual download link -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

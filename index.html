@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AN Magicks Recording Access Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007bff; /* Blue header */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%; /* Full width header */
+            position: fixed; /* Keep the header fixed at the top */
+            top: 0; /* Align at the top */
+            left: 0; /* Align at the left */
+            z-index: 1000; /* Ensure the header is above other content */
+        }
+
+        .container {
+            display: flex; /* Use flexbox for alignment */
+            justify-content: center; /* Center the login box */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Full height of viewport */
+            padding-top: 80px; /* Space for fixed header */
+            background-color: #f9f9f9;
+        }
+
+        .login-box {
+            background: white;
+            padding: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%; /* Full width */
+            max-width: 400px; /* Limit max width */
+            text-align: center; /* Center text */
+        }
+
+        .login-box .logo {
+            width: 100%; /* Responsive logo */
+            max-width: 150px; /* Max width for logo */
+            margin-bottom: 20px; /* Space below logo */
+        }
+
+        .input-group {
+            margin-bottom: 15px; /* Space between input fields */
+        }
+
+        .input-group label {
+            display: block; /* Block display for labels */
+            margin-bottom: 5px; /* Space below label */
+        }
+
+        .input-group input {
+            width: 100%; /* Full width inputs */
+            padding: 10px; /* Padding inside inputs */
+            border: 1px solid #ccc; /* Border style */
+            border-radius: 4px; /* Rounded corners */
+        }
+
+        button {
+            padding: 10px 15px; /* Padding for button */
+            background-color: #007bff; /* Blue button */
+            color: white;
+            border: none; /* No border */
+            border-radius: 4px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            width: 100%; /* Full width button */
+            transition: background-color 0.3s; /* Transition for hover effect */
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 600px) {
+            header {
+                padding: 15px 0; /* Adjust header padding on small screens */
+            }
+
+            .login-box {
+                padding: 15px; /* Adjust padding for smaller screens */
+            }
+
+            .login-box .logo {
+                max-width: 120px; /* Smaller logo on mobile */
+            }
+        }
+    </style>
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const userId = document.getElementById('userId').value;
+            const password = document.getElementById('password').value;
+
+            // User credentials
+            const users = {
+                'User1': 'password1',
+                'User2': 'password2',
+                'User3': 'password3'
+            };
+
+            // Check if the entered credentials are valid
+            if (users[userId] && users[userId] === password) {
+                window.location.href = 'Course Page.html'; // Redirect to the next page
+            } else {
+                alert('Invalid User ID or Password.'); // Alert for invalid login
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>AN Magicks Recording Access Portal</h1>
+    </header>
+    <div class="container">
+        <div class="login-box">
+            <img src="C:\Users\Lenovo\Downloads\AN 2 Wbsitee-20241025T152914Z-001\AN 2 Wbsitee_\login logo.png" alt="Logo" class="logo"> <!-- Replace with your logo URL -->
+            <form onsubmit="handleLogin(event)">
+                <div class="input-group">
+                    <label for="userId">User ID</label>
+                    <input type="text" id="userId" name="userId" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
